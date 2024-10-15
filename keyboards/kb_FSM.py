@@ -1,8 +1,8 @@
 from aiogram import types
 
 Video = types.InlineKeyboardButton('Видео Уроки📼', callback_data='Video')
-HomeWork = types.InlineKeyboardButton('Разбор Домашек🏠', callback_data='HomeWork')
-Project = types.InlineKeyboardButton('Проекты🧠', callback_data='Project')
+HomeWork = types.InlineKeyboardButton('Домашнее задание🏠', callback_data='HomeWork')
+# Project = types.InlineKeyboardButton('Проекты🧠', callback_data='Project')
 Book = types.InlineKeyboardButton('Текстовые материалы📚', callback_data='Book')
 Learn = types.InlineKeyboardButton('Дополнительная практика🫡', callback_data='Learn')
 
@@ -12,6 +12,7 @@ Module3 = types.InlineKeyboardButton('Module3🤯', callback_data='Module3')
 Module4 = types.InlineKeyboardButton('Module4🫣', callback_data='Module4')
 
 AllMenu = types.InlineKeyboardButton('Вернуться в меню🔙', callback_data='Menu')
+
 
 def gen_learn_button(callback: types.CallbackQuery) -> [list]:
     """
@@ -32,6 +33,8 @@ def gen_learn_button(callback: types.CallbackQuery) -> [list]:
         else:
             kb.append(types.InlineKeyboardButton(f"{name}🔶", callback_data=f"{call}"))
     return kb
+
+
 def gen_learn_info() -> [dict]:
     """
     :param callback: Ключ к словарю
@@ -68,6 +71,8 @@ def gen_book_button(callback: types.CallbackQuery) -> [list]:
         else:
             kb.append(types.InlineKeyboardButton(f"{name}🔶", callback_data=f"{call}"))
     return kb
+
+
 def gen_book_info() -> [dict]:
     """
     :param callback: Ключ к словарю
@@ -83,6 +88,3 @@ def gen_book_info() -> [dict]:
         'OOP': ['ООП', 'https://telegra.ph/OOP-02-05'],
     }
     return info
-
-
-

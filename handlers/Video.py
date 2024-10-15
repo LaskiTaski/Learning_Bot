@@ -64,4 +64,3 @@ def register_handlers_video(dp: Dispatcher):
 
     dp.register_callback_query_handler(cb_video_module4, lambda x: x.data in gen_video_info()[3],
                                        state=(FSMClient.video, None))
-

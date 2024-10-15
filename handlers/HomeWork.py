@@ -1,7 +1,8 @@
-from aiogram import Dispatcher,types
+from aiogram import Dispatcher, types
 from keyboards.kb_HomeWork import *
 from handlers.FSM import FSMClient
 from keyboards.kb_FSM import AllMenu
+
 
 # @dp.callback_query_handlers(lambda x: x.data in gen_video_info()[0], state=(FSMClient.video, None))
 async def cb_homework_module1(callback: types.CallbackQuery):

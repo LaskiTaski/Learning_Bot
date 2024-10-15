@@ -21,6 +21,8 @@ def gen_video_button(callback: types.CallbackQuery) -> [list]:
         else:
             kb.append(types.InlineKeyboardButton(f"{name}🔶", callback_data=f"{call}"))
     return kb
+
+
 def gen_video_info() -> [dict]:
     """
     :param callback: Ключ к словарю
